@@ -1,0 +1,16 @@
+git -v
+pwd //aktuelles verzeichnis
+cd 
+cmd //öffnet die cmd in bash
+explorer .//öffnet den explorer
+ls //dateien
+git clone [license]
+mv //ändert name 
+code datei.datei //öffnet in visual studio code 
+notepad datai.datai //
+git status
+git add [datei]
+git commit -m"[command]"
+git push
+git fetch
+git pull //hollt die Daten von Git Hub 
