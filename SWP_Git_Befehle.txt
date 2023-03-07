@@ -13,4 +13,4 @@ git add [datei]
 git commit -m"[command]"
 git push
 git fetch
-git pull //hollt die Daten von Git Hub 
+git pull //hollt die Daten von Git Hub
