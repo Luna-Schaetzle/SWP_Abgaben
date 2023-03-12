@@ -1,10 +1,23 @@
 public class Flower extends Plant{
 
     public String color;
+    public int amOfSeeds;
+    public boolean eatable;
 
-    public Flower(int thirst, int price, int selling_price, String color) {
-        super(thirst, price, selling_price);
-        this.color = color;
+    public int getAmOfSeeds() {
+        return amOfSeeds;
+    }
+
+    public void setAmOfSeeds(int amOfSeeds) {
+        this.amOfSeeds = amOfSeeds;
+    }
+
+    public boolean isEatable() {
+        return eatable;
+    }
+
+    public void setEatable(boolean eatable) {
+        this.eatable = eatable;
     }
 
     public String getColor() {

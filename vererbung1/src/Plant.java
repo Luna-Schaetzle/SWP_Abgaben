@@ -1,5 +1,7 @@
 public abstract class Plant {
 
+    private String name;
+    private int health;
     private boolean isplanted;
     private int growstatus;
     private int waterstaus;
@@ -7,16 +9,24 @@ public abstract class Plant {
     private int price;
     private int selling_price;
 
-    public Plant(int thirst, int price, int selling_price) {
-        this.isplanted = false;
-        this.growstatus = 0;
-        this.waterstaus = 0;
-        this.thirst = thirst;
-        this.price = price;
-        this.selling_price = selling_price;
+
+
+
+    public String getName() {
+        return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
 
     public boolean isIsplanted() {
         return isplanted;
