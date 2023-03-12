@@ -7,6 +7,16 @@ public abstract class Plant {
     private int price;
     private int selling_price;
 
+    public Plant(int thirst, int price, int selling_price) {
+        this.isplanted = false;
+        this.growstatus = 0;
+        this.waterstaus = 0;
+        this.thirst = thirst;
+        this.price = price;
+        this.selling_price = selling_price;
+    }
+
+
 
     public boolean isIsplanted() {
         return isplanted;
