@@ -3,6 +3,9 @@ public class Corn {
     private double amOfCorp;
     private int size;
 
+    public Corn() {
+    }
+
     public double getAmOfCorp() {
         return amOfCorp;
     }

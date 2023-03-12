@@ -4,6 +4,9 @@ public class Flower extends Plant{
     public int amOfSeeds;
     public boolean eatable;
 
+    public Flower() {
+    }
+
     public int getAmOfSeeds() {
         return amOfSeeds;
     }

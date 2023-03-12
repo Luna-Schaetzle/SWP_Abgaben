@@ -9,8 +9,8 @@ public abstract class Plant {
     private int price;
     private int selling_price;
 
-
-
+    public Plant() {
+    }
 
     public String getName() {
         return name;

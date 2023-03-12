@@ -11,13 +11,18 @@ public class main {
     public static final String ANSI_BRIGHT_BG_WHITE  = "\u001B[107m";
 
  */
+    //Game_start.start();
+    //COLORS.transflag();
+
 
 
     public static void main(String[] args) {
 
-        //Game_start.start();
+        Game_start game = new Game_start();
 
-        COLORS.transflag();
+
+
+
 
 
     }

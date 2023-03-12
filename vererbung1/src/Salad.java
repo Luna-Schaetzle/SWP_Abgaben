@@ -3,7 +3,8 @@ public class Salad extends Plant{
     private int nutrianValue;
 
 
-
+    public Salad() {
+    }
 
     public int getNutrianValue() {
         return nutrianValue;
