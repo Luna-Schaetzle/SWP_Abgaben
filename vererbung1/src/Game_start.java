@@ -38,10 +38,34 @@ public class Game_start {
         sleep(3000);
         System.out.println("Artemis: I will help you making ur on little farm :3");
         sleep(4000);
-        System.out.println("Artemis: Lets start with buying some seeds to start.");
+        System.out.println("Artemis: Lets start with buying some seeds to plant.");
         sleep(4000);
-        System.out.println("Artemis: come lets travel to the shop.");
-        sleep(8000);
+        System.out.println("Artemis: Follow me to the Plant Shop.");
+        sleep(3000);
+        System.out.print("U enter the: ");
+        System.out.println(COLORS.ANSI_BG_GREEN + "#### Plant Shop™ ####" + COLORS.ANSI_RESET);
+        sleep(2000);
+        System.out.println("Listbeth: Hellow Artemis how are u?");
+        sleep(2500);
+        System.out.println("Artemis: I'm doing GOOD d=====(￣▽￣*)b ");
+        sleep(4000);
+        if (gender.equals("female")){
+            System.out.println("Lisbeth: Who is this beautiful Girl ur with? (❁´◡`❁)");
+        }
+        else if (gender.equals("male")){
+            System.out.println("Lisbeth: Who is this beautiful Boy ur with? (❁´◡`❁)");
+        }
+        else{
+            System.out.println("Lisbeth: Who is this beautiful Person ur with? (❁´◡`❁)");
+        }
+        sleep(3000);
+        System.out.println("Artemis: Thats " + name + ".");
+        sleep(1000);
+        System.out.println("Artemis: " + pronouns[0] + " is with me to grab some seeds for " + pronouns[1] + " litle farm ヽ(✿ﾟ▽ﾟ)ノ");
+        sleep(6000);
+        System.out.println("Lisbeth: |(@^0^@)| nice! Look what i Have");
+        sleep(3000);
+
         shop.printshop();
     }
 
