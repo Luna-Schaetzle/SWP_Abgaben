@@ -1,16 +1,20 @@
-git -v
+git -v // zeigt version an 
 pwd //aktuelles verzeichnis
-cd 
+cd  //change direktory
 cmd //öffnet die cmd in bash
 explorer .//öffnet den explorer
 ls //dateien
-git clone [license]
+git clone [license] //colned ein git repository auf deinen Computer
 mv //ändert name 
 code datei.datei //öffnet in visual studio code 
 notepad datai.datai //
-git status
-git add [datei]
-git commit -m"[command]"
-git push
-git fetch
+git status //zeigt den git status an 
+git add [datei] //addet eine Datei in die "Commit pipline"
+git commit -m"[command]" //macht ein commit mit dem kommentar
+git commit //ohne kommentar dan öfnet sich vim <3
+git push //pusht die daten auf Git hub
+git fetch //Download von commits, files, und refs
 git pull //hollt die Daten von Git Hub
+git mv OLD-FILENAME NEW-FILENAME //neu bennenen
+vim [Dateiname] //Macht eine datei in Vim auf
+[Tab] //autofil das nächst liegenste z.b. git comm[tab] git vervolständigt auf git commit
