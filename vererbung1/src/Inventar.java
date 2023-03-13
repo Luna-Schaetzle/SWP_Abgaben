@@ -1,19 +1,44 @@
 import java.util.ArrayList;
 
-public class inventar {
+public class Inventar {
 
-
+    private int money;
     ArrayList<Flower> flowers = new ArrayList<>();
     ArrayList<Salad> salads = new ArrayList<>();
     ArrayList<Cerial> cerials = new ArrayList<>();
 
-    public inventar(ArrayList<Flower> flowers, ArrayList<Salad> salads, ArrayList<Cerial> cerials) {
+
+
+    //wird noch verbessert
+    @Override
+    public String toString() {
+        return "Inventar{" +
+                "money=" + money +
+                ", flowers=" + flowers +
+                ", salads=" + salads +
+                ", cerials=" + cerials +
+                '}';
+    }
+
+    public Inventar(ArrayList<Flower> flowers, ArrayList<Salad> salads, ArrayList<Cerial> cerials) {
         this.flowers = flowers;
         this.salads = salads;
         this.cerials = cerials;
     }
 
-    public inventar() {
+    public Inventar() {
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void addMoney(int money) {
+        this.money = this.money + money;
+    }
+
+    public void subMoney(int money) {
+        this.money = this.money - money;
     }
 
     public ArrayList<Flower> getFlowers() {

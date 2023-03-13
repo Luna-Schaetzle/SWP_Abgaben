@@ -11,6 +11,8 @@ public class shop {
     Salad[] salads;
     Cerial[] cerials;
 
+    Inventar inventar = Game_start.coninv();
+
     Scanner scanner = new Scanner(System.in);
 
 
@@ -35,52 +37,96 @@ public class shop {
     }
 
     public void printshop(){
+        String buyanswer;
+        char morebuy = ' ';
 
-        System.out.println("");
+        do {
+            System.out.println("");
 
-        System.out.println(COLORS.ANSI_BG_GREEN + "#### Plant Shop™ ####" + COLORS.ANSI_RESET);
-        System.out.println("# Flowers [f]#");
-        for (int i = 0; i < this.anzanflow;i++){
-            System.out.print((i+1) + " - ");
-            //flower[i] = Flower.ranflower();
-            System.out.println(flower[i].getName() + " " + flower[i].getPrice() + " ✿");
+            System.out.println(COLORS.ANSI_BG_GREEN + "#### Plant Shop™ ####" + COLORS.ANSI_RESET + " U have: " + inventar.getMoney() + " ✿");
+            System.out.println("# Flowers [f]#");
+            for (int i = 0; i < this.anzanflow; i++) {
+                System.out.print((i + 1) + " - ");
+                //flower[i] = Flower.ranflower();
+                System.out.println(flower[i].getName() + " " + flower[i].getPrice() + " ✿");
 
-        }
-        System.out.println("# Salad [s]#");
-        for (int i = 0; i < this.anzanSalad;i++){
-            System.out.print((i+1) + " - ");
-            System.out.println(salads[i].getName() + " " + salads[i].getPrice() + " ✿");
-        }
-        System.out.println("# Cerials [c]#");
-        for (int i = 0; i < this.anzanCerial; i++){
-            System.out.print((i+1) + " - ");
-            System.out.println(cerials[i].getName() + " " + cerials[i].getPrice() + " ✿");
-        }
-        System.out.println("Lisbeth: What do u wanna Buy: ");
-        String buyanswer = scanner.next().toLowerCase();
+            }
+            System.out.println("# Salad [s]#");
+            for (int i = 0; i < this.anzanSalad; i++) {
+                System.out.print((i + 1) + " - ");
+                System.out.println(salads[i].getName() + " " + salads[i].getPrice() + " ✿");
+            }
+            System.out.println("# Cerials [c]#");
+            for (int i = 0; i < this.anzanCerial; i++) {
+                System.out.print((i + 1) + " - ");
+                System.out.println(cerials[i].getName() + " " + cerials[i].getPrice() + " ✿");
+            }
+            do {
+                System.out.println("Lisbeth: What do u wanna Buy: ");
+                buyanswer = scanner.next().toLowerCase();
+            } while (buyverarbeitung(buyanswer) == false);
+            System.out.println("Lisbeth: Thanks for ur purchase! o(*^＠^*)o");
+            System.out.println("Lisbeth: Do u wanna buy more [y/n]: ");
+            morebuy = scanner.next().toLowerCase().charAt(0);
 
 
+        }while (morebuy != 'n');
 
     }
 
-    private boolean eingabeverarbeitung(String eingabe){
+    private boolean buyverarbeitung(String eingabe){
+        String iwert;
         if (eingabe.charAt(0) == 'f'){
-                if (eingabe.charAt(1) == '1'){
+            for (int i = 0; i < this.anzanflow;i++){
+                iwert = String.valueOf((i+1));
+                if (eingabe.charAt(1) == iwert.charAt(0)){
+                    inventar.addFlowers(flower[i]);
+                    inventar.subMoney(flower[i].getPrice());
+                    flower[i] = Flower.ranflower();
+                    return true;
+                }
+            }
 
+        }
+        if (eingabe.charAt(0) == 's'){
+            for (int i = 0; i < this.anzanSalad;i++){
+                iwert = String.valueOf((i+1));
+                if (eingabe.charAt(1) == iwert.charAt(0)){
+                    inventar.addSalads(salads[i]);
+                    inventar.subMoney(salads[i].getPrice());
+                    salads[i] = Salad.ranSalad();
+                    return true;
                 }
-                else if (eingabe.charAt(1) == '2'){
+            }
 
-                }
-                else if (eingabe.charAt(1) == '3'){
+        }
+        if (eingabe.charAt(0) == 'c'){
+            for (int i = 0; i < this.anzanCerial;i++){
 
+                iwert = String.valueOf((i+1));
+                if (eingabe.charAt(1) == iwert.charAt(0)){
+                    inventar.addCerials(cerials[i]);
+                    inventar.subMoney(cerials[i].getPrice());
+                    cerials[i] = Cerial.rancorn();
+                    return true;
                 }
-                else {
-                    return false;
-                }
+            }
+
+        }
+        if (eingabe.charAt(0) == 'i'){
+            System.out.println(inventar.toString());
+            return false;
         }
 
         return false;
     }
+
+    /*
+    private void trade (){
+
+    }
+
+     */
 
 
     /*

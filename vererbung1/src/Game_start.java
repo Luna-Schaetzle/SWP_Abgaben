@@ -1,12 +1,14 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Game_start {
+
+    //public static Object inventar;
     Scanner scanner = new Scanner(System.in);
 
     private String name;
     private String gender;
     private String[] pronouns = new String[2];
+    private static Inventar inventar = new Inventar();
 
 
     public Game_start() {
@@ -35,12 +37,17 @@ public class Game_start {
 
     private void introduceArtemis (){
         //artemisnameprint();
+
         /*
         System.out.println("Artemis: Hello " + name + " my name is Artemis");
         sleep(3000);
         System.out.println("Artemis: I will help you making ur on little farm :3");
         sleep(4000);
         System.out.println("Artemis: Lets start with buying some seeds to plant.");
+        sleep(3000);
+        System.out.println("Artemis: Here some Money for u");
+        //inventar.addMoney(100);
+        System.out.println("U got 100✿");
         sleep(4000);
         System.out.println("Artemis: Follow me to the Plant Shop.");
         sleep(3000);
@@ -70,8 +77,14 @@ public class Game_start {
 
          */
 
+
+        inventar.addMoney(100);
         shop shop1 = new shop(3,3,3);
         shop1.printshop();
+    }
+
+    public static Inventar coninv(){
+        return inventar;
     }
 
     private void artemisnameprint (){
