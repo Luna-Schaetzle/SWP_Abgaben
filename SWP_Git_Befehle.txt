@@ -18,3 +18,9 @@ git pull //hollt die Daten von Git Hub
 git mv OLD-FILENAME NEW-FILENAME //neu bennenen
 vim [Dateiname] //Macht eine datei in Vim auf
 [Tab] //autofil das nächst liegenste z.b. git comm[tab] git vervolständigt auf git commit
+git push origin localBranchName:remoteBranchName //p
+git checkout _branch //Branch wechseln
+git git push origin master:main //?
+git merge master //merged den master wenn man im Main ist 
+git branch //zeigt die aktuelen Branches und markiert den Aktuellen Grün
+
