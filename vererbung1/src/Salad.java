@@ -14,7 +14,7 @@ public class Salad extends Plant{
     }
 
 
-    public Salad() {
+    public Salad(String s, int i, int i1, int i2, int i3, int i4) {
     }
 
     static Salad ranSalad(){
@@ -24,25 +24,25 @@ public class Salad extends Plant{
         switch (r){
             case 0:
 
-                ransalad = new Salad("Anemone",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
+                ransalad = new Salad("0s",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
                 break;
             case 1:
-                ransalad = new Salad("1",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
+                ransalad = new Salad("1s",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
                 break;
             case 2:
-                ransalad = new Salad("2",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
+                ransalad = new Salad("2s",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
                 break;
             case 3:
-                ransalad = new Salad("3",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
+                ransalad = new Salad("3s",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
                 break;
             case 4:
-                ransalad = new Salad("4",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
+                ransalad = new Salad("4s",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
                 break;
             case 5:
-                ransalad = new Salad("5",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
+                ransalad = new Salad("5s",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
                 break;
             default:
-                ransalad = new Salad("6",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
+                ransalad = new Salad("6s",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),(ran.nextInt(3) + 1));
                 break;
 
         }

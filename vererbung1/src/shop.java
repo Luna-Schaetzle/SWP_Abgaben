@@ -16,6 +16,8 @@ public class shop {
 
     public void printshop(){
         Flower[] flower = new Flower[anzanflow];
+        Salad[] salads = new Salad[anzanSalad];
+        Corn[] corns = new Corn[anzanCorn];
 
         System.out.println("");
 
@@ -27,13 +29,18 @@ public class shop {
             System.out.println(flower[i].getName());
         }
         System.out.println("# Salad #");
-        System.out.println("1 - ");
-        System.out.println("2 - ");
-        System.out.println("3 - ");
+        for (int i = 0; i < this.anzanSalad;i++){
+            System.out.print((i+1) + " - ");
+            salads[i] = Salad.ranSalad();
+            System.out.println(salads[i].getName());
+        }
         System.out.println("# Corn #");
-        System.out.println("1 - ");
-        System.out.println("2 - ");
-        System.out.println("3 - ");
+        for (int i = 0; i < this.anzanCorn;i++){
+            System.out.print((i+1) + " - ");
+            corns[i] = Corn.rancorn();
+            System.out.println(corns[i].getName());
+        }
+
     }
 
 
