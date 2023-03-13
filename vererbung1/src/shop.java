@@ -1,3 +1,6 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class shop {
 
     //private static anzanflow;
@@ -7,6 +10,8 @@ public class shop {
     Flower[] flower;
     Salad[] salads;
     Cerial[] cerials;
+
+    Scanner scanner = new Scanner(System.in);
 
 
     public shop(int anzanflow, int anzanSalad, int anzanCerial) {
@@ -34,28 +39,64 @@ public class shop {
         System.out.println("");
 
         System.out.println(COLORS.ANSI_BG_GREEN + "#### Plant Shop™ ####" + COLORS.ANSI_RESET);
-        System.out.println("# Flowers #");
+        System.out.println("# Flowers [f]#");
         for (int i = 0; i < this.anzanflow;i++){
             System.out.print((i+1) + " - ");
             //flower[i] = Flower.ranflower();
             System.out.println(flower[i].getName() + " " + flower[i].getPrice() + " ✿");
 
         }
-        System.out.println("# Salad #");
+        System.out.println("# Salad [s]#");
         for (int i = 0; i < this.anzanSalad;i++){
             System.out.print((i+1) + " - ");
-            //salads[i] = Salad.ranSalad();
             System.out.println(salads[i].getName() + " " + salads[i].getPrice() + " ✿");
         }
-        System.out.println("# Cerials #");
+        System.out.println("# Cerials [c]#");
         for (int i = 0; i < this.anzanCerial; i++){
             System.out.print((i+1) + " - ");
-            //cerials[i] = Cerial.rancorn();
             System.out.println(cerials[i].getName() + " " + cerials[i].getPrice() + " ✿");
         }
+        System.out.println("Lisbeth: What do u wanna Buy: ");
+        String buyanswer = scanner.next().toLowerCase();
+
 
 
     }
+
+    private boolean eingabeverarbeitung(String eingabe){
+        if (eingabe.charAt(0) == 'f'){
+                if (eingabe.charAt(1) == '1'){
+
+                }
+                else if (eingabe.charAt(1) == '2'){
+
+                }
+                else if (eingabe.charAt(1) == '3'){
+
+                }
+                else {
+                    return false;
+                }
+        }
+
+        return false;
+    }
+
+
+    /*
+    //IDEE: man gibt was ein und es erkennt welche planze es ist
+    public void erkennung(String buyanswer){
+        int i = 0;
+        do {
+            i++;
+        }while (!buyanswer.equals(flower[i]) || i < 3);
+        if (i == 3){
+
+        }
+
+    }
+
+     */
 
 
     // System.out.format("%15s%15s%15s%n", row);
