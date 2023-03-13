@@ -28,19 +28,19 @@ public class Flower extends Plant{
                 ranflower = new Flower("Anemone",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_YELLOW,(ran.nextInt(3) + 1));
                 break;
             case 1:
-                ranflower = new Flower("1",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_YELLOW,(ran.nextInt(3) + 1));
+                ranflower = new Flower("orchid",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_BRIGHT_CYAN,(ran.nextInt(3) + 1));
                 break;
             case 2:
-                ranflower = new Flower("2",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_YELLOW,(ran.nextInt(3) + 1));
+                ranflower = new Flower("Tulip",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_BRIGHT_PURPLE,(ran.nextInt(3) + 1));
                 break;
             case 3:
-                ranflower = new Flower("3",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_YELLOW,(ran.nextInt(3) + 1));
+                ranflower = new Flower("Lavender",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_PURPLE,(ran.nextInt(3) + 1));
                 break;
             case 4:
-                ranflower = new Flower("4",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_YELLOW,(ran.nextInt(3) + 1));
+                ranflower = new Flower("Rose",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_RED,(ran.nextInt(3) + 1));
                 break;
             case 5:
-                ranflower = new Flower("5",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_YELLOW,(ran.nextInt(3) + 1));
+                ranflower = new Flower("Poppy",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_RED,(ran.nextInt(3) + 1));
                 break;
             default:
                 ranflower = new Flower("6",(ran.nextInt(7) + 3),(ran.nextInt(10) + 5),(ran.nextInt(8) + 3),COLORS.ANSI_YELLOW,(ran.nextInt(3) + 1));

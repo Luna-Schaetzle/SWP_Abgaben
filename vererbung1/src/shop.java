@@ -1,23 +1,35 @@
-import java.util.Random;
-import java.util.concurrent.Flow;
-
 public class shop {
 
     //private static anzanflow;
     public int anzanflow;
     public int anzanSalad;
-    public int anzanCorn;
+    public int anzanCerial;
+    Flower[] flower;
+    Salad[] salads;
+    Cerial[] cerials;
 
-    public shop(int anzanflow, int anzanSalad, int anzanCorn) {
+
+    public shop(int anzanflow, int anzanSalad, int anzanCerial) {
         this.anzanflow = anzanflow;
         this.anzanSalad = anzanSalad;
-        this.anzanCorn = anzanCorn;
+        this.anzanCerial = anzanCerial;
+
+        flower = new Flower[anzanflow];
+        salads = new Salad[anzanSalad];
+        cerials = new Cerial[anzanCerial];
+
+        for (int i = 0; i < anzanflow;i++){
+            flower[i] = Flower.ranflower();
+        }
+        for (int i = 0; i < anzanSalad;i++){
+            salads[i] = Salad.ranSalad();
+        }
+        for (int i = 0; i < anzanCerial; i++){
+            cerials[i] = Cerial.rancorn();
+        }
     }
 
     public void printshop(){
-        Flower[] flower = new Flower[anzanflow];
-        Salad[] salads = new Salad[anzanSalad];
-        Corn[] corns = new Corn[anzanCorn];
 
         System.out.println("");
 
@@ -25,25 +37,28 @@ public class shop {
         System.out.println("# Flowers #");
         for (int i = 0; i < this.anzanflow;i++){
             System.out.print((i+1) + " - ");
-            flower[i] = Flower.ranflower();
-            System.out.println(flower[i].getName());
+            //flower[i] = Flower.ranflower();
+            System.out.println(flower[i].getName() + " " + flower[i].getPrice() + " ✿");
+
         }
         System.out.println("# Salad #");
         for (int i = 0; i < this.anzanSalad;i++){
             System.out.print((i+1) + " - ");
-            salads[i] = Salad.ranSalad();
-            System.out.println(salads[i].getName());
+            //salads[i] = Salad.ranSalad();
+            System.out.println(salads[i].getName() + " " + salads[i].getPrice() + " ✿");
         }
-        System.out.println("# Corn #");
-        for (int i = 0; i < this.anzanCorn;i++){
+        System.out.println("# Cerials #");
+        for (int i = 0; i < this.anzanCerial; i++){
             System.out.print((i+1) + " - ");
-            corns[i] = Corn.rancorn();
-            System.out.println(corns[i].getName());
+            //cerials[i] = Cerial.rancorn();
+            System.out.println(cerials[i].getName() + " " + cerials[i].getPrice() + " ✿");
         }
+
 
     }
 
 
+    // System.out.format("%15s%15s%15s%n", row);
 
     /*
     private Flower ranflower(){
