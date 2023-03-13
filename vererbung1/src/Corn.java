@@ -1,4 +1,4 @@
-public class Corn {
+public class Corn extends Plant{
 
     private double amOfCorp;
     private int size;

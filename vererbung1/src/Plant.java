@@ -9,6 +9,17 @@ public abstract class Plant {
     private int price;
     private int selling_price;
 
+    public Plant(String name, int thirst, int price, int selling_price) {
+        this.name = name;
+        this.health = 100;
+        this.isplanted = false;
+        this.growstatus = 0;
+        this.waterstaus = 0;
+        this.thirst = thirst;
+        this.price = price;
+        this.selling_price = selling_price;
+    }
+
     public Plant() {
     }
 

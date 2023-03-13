@@ -8,6 +8,7 @@ public class Game_start {
     private String gender;
     private String[] pronouns = new String[2];
 
+
     public Game_start() {
 
         System.out.print("Enter your name: ");
@@ -34,6 +35,7 @@ public class Game_start {
 
     private void introduceArtemis (){
         //artemisnameprint();
+        /*
         System.out.println("Artemis: Hello " + name + " my name is Artemis");
         sleep(3000);
         System.out.println("Artemis: I will help you making ur on little farm :3");
@@ -66,7 +68,10 @@ public class Game_start {
         System.out.println("Lisbeth: |(@^0^@)| nice! Look what i Have");
         sleep(3000);
 
-        shop.printshop();
+         */
+
+        shop shop1 = new shop(3,3,3);
+        shop1.printshop();
     }
 
     private void artemisnameprint (){

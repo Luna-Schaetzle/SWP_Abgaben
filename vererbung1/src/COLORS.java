@@ -63,6 +63,8 @@ public class COLORS {
 
         System.out.println(ANSI_RESET + "\n  Back to default.\n");
 
+        transflag();
+
     }
 
     public static void transflag (){
