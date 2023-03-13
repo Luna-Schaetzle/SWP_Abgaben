@@ -16,6 +16,7 @@ public class shop {
 
     public void printshop(){
         Flower[] flower = new Flower[anzanflow];
+
         System.out.println("");
 
         System.out.println(COLORS.ANSI_BG_GREEN + "#### Plant Shop™ ####" + COLORS.ANSI_RESET);
