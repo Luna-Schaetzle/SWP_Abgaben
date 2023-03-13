@@ -38,7 +38,7 @@ public class Game_start {
     private void introduceArtemis (){
         //artemisnameprint();
 
-        /*
+        
         System.out.println("Artemis: Hello " + name + " my name is Artemis");
         sleep(3000);
         System.out.println("Artemis: I will help you making ur on little farm :3");
@@ -75,7 +75,7 @@ public class Game_start {
         System.out.println("Lisbeth: |(@^0^@)| nice! Look what i Have");
         sleep(3000);
 
-         */
+         
 
 
         inventar.addMoney(100);
