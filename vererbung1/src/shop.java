@@ -7,9 +7,9 @@ public class shop {
     public int anzanflow;
     public int anzanSalad;
     public int anzanCerial;
-    Flower[] flower;
-    Salad[] salads;
-    Cerial[] cerials;
+    public Flower[] flower;
+    public Salad[] salads;
+    public Cerial[] cerials;
 
 
 
