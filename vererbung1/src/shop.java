@@ -11,7 +11,7 @@ public class shop {
     Salad[] salads;
     Cerial[] cerials;
 
-    Inventar inventar = Game_start.coninv();
+
 
     Scanner scanner = new Scanner(System.in);
 
@@ -43,7 +43,7 @@ public class shop {
         do {
             System.out.println("");
 
-            System.out.println(COLORS.ANSI_BG_GREEN + "#### Plant Shop™ ####" + COLORS.ANSI_RESET + " U have: " + inventar.getMoney() + " ✿");
+            System.out.println(COLORS.ANSI_BG_GREEN + "#### Plant Shop™ ####" + COLORS.ANSI_RESET + " U have: " + main.inventar.getMoney() + " ✿");
             System.out.println("# Flowers [f]#");
             for (int i = 0; i < this.anzanflow; i++) {
                 System.out.print((i + 1) + " - ");
@@ -80,8 +80,8 @@ public class shop {
             for (int i = 0; i < this.anzanflow;i++){
                 iwert = String.valueOf((i+1));
                 if (eingabe.charAt(1) == iwert.charAt(0)){
-                    inventar.addFlowers(flower[i]);
-                    inventar.subMoney(flower[i].getPrice());
+                    main.inventar.addFlowers(flower[i]);
+                    main.inventar.subMoney(flower[i].getPrice());
                     flower[i] = Flower.ranflower();
                     return true;
                 }
@@ -92,8 +92,8 @@ public class shop {
             for (int i = 0; i < this.anzanSalad;i++){
                 iwert = String.valueOf((i+1));
                 if (eingabe.charAt(1) == iwert.charAt(0)){
-                    inventar.addSalads(salads[i]);
-                    inventar.subMoney(salads[i].getPrice());
+                    main.inventar.addSalads(salads[i]);
+                    main.inventar.subMoney(salads[i].getPrice());
                     salads[i] = Salad.ranSalad();
                     return true;
                 }
@@ -105,8 +105,8 @@ public class shop {
 
                 iwert = String.valueOf((i+1));
                 if (eingabe.charAt(1) == iwert.charAt(0)){
-                    inventar.addCerials(cerials[i]);
-                    inventar.subMoney(cerials[i].getPrice());
+                    main.inventar.addCerials(cerials[i]);
+                    main.inventar.subMoney(cerials[i].getPrice());
                     cerials[i] = Cerial.rancorn();
                     return true;
                 }
@@ -114,7 +114,7 @@ public class shop {
 
         }
         if (eingabe.charAt(0) == 'i'){
-            System.out.println(inventar.toString());
+            System.out.println(main.inventar.toString());
             return false;
         }
 

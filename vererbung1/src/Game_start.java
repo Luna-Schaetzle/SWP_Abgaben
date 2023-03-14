@@ -8,7 +8,7 @@ public class Game_start {
     private String name;
     private String gender;
     private String[] pronouns = new String[2];
-    private static Inventar inventar = new Inventar();
+
 
 
     public Game_start() {
@@ -78,14 +78,12 @@ public class Game_start {
          
 
 
-        inventar.addMoney(100);
+        main.inventar.addMoney(100);
         shop shop1 = new shop(3,3,3);
         shop1.printshop();
     }
 
-    public static Inventar coninv(){
-        return inventar;
-    }
+   
 
     private void artemisnameprint (){
         final String ANSI_RESET = "\u001B[0m";

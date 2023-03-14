@@ -2,6 +2,8 @@ import java.awt.*;
 
 public class main {
 
+    public static Inventar inventar = new Inventar();
+
 /*
     public static final String ANSI_RESET = "\u001B[0m";
 
@@ -26,6 +28,8 @@ public class main {
 
 
     }
+
+
 
 
 
