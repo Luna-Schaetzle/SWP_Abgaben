@@ -11,6 +11,7 @@ public class Main {
             writer = new FileWriter("myFile.txt");
             writer.write(myString);
             writer.close();
+            //writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
