@@ -7,12 +7,17 @@ public class FileWirter {
 
     public static void main(String[] args) {
 
+        /**
+         * Write a string to a file
+         */
         try {
             writeToFile(args[0], args[1]);
         } catch (IOException e) {
             System.out.println("sorry somthing went wrong");
         }
         System.out.println("Success");
+
+
 
         /**
          * Read the file and print it to the console
