@@ -18,7 +18,6 @@ public class FileWirter {
         System.out.println("Success");
 
 
-
         /**
          * Read the file and print it to the console
          */
