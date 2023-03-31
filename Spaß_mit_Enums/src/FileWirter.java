@@ -19,9 +19,9 @@ public class FileWirter {
 
 
         /**
-         * Read the file and print it to the console
+         * Read the file and print it to the console from the 3rd argument
          */
-            readAndPrintFileContents(args[0]);
+            readAndPrintFileContents(args[2]);
 
 
         /*

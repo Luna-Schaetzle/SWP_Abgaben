@@ -1,1 +1,6 @@
-2 Argumente eine schreibt in eine datei und das andere ist das was es reinschreibt
+3 Argumente eine schreibt in eine datei und das andere ist das was es reinschreibt und die 3.
+printet den inhalt des files aus
+
+Arg 1 = Dateiname zum schreiben
+Arg 2 = Inhalt der Datei
+Arg 3 = Dateiname zum auslesen
