@@ -1,9 +1,3 @@
-/*
-Credits to Elyah for the idea
-improved by me (Luna)
-CopyRight 2023
-by Luna
- */
 
 
 import java.util.Scanner;
