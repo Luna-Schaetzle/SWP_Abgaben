@@ -2,6 +2,7 @@ public class SumOfArgsCalc {
     public static void main(String[] args) {
         double result = 0;
         double[] numbers = new double[args.length];
+        //  String s = String.valueOf(args[0]);
 
         for (int i = 0; i < args.length; i++) {
 
