@@ -1,0 +1,1 @@
+Um eine Ausgabe mit z.b.: System.out.println(""); zu speichern kan man beim Ausgeben am ende noch > Dateiname hinzufügenum es in die in dieser Datei zu Speicher. z.B.: java SumOfArgs 3 3 >test.txt
