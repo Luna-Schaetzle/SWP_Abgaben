@@ -1,4 +1,7 @@
 public class SumOfArgsCalc {
+
+
+    
     public static void main(String[] args) {
         double result = 0;
         double[] numbers = new double[args.length];

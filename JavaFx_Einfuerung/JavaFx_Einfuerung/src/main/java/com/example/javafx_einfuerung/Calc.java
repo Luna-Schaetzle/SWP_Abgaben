@@ -50,7 +50,7 @@ public class Calc extends Application {
     private VBox createLayout(TextField screen, TilePane buttons) {
         final VBox layout = new VBox(20);
         layout.setAlignment(Pos.CENTER);
-        layout.setStyle("-fx-background-color: chocolate; -fx-padding: 20; -fx-font-size: 20;");
+        layout.setStyle("-fx-background-color: lightpink; -fx-padding: 20; -fx-font-size: 20;");
         layout.getChildren().setAll(screen, buttons);
         handleAccelerators(layout);
         screen.prefWidthProperty().bind(buttons.widthProperty());
@@ -68,7 +68,7 @@ public class Calc extends Application {
 
     private TextField createScreen() {
         final TextField screen = new TextField();
-        screen.setStyle("-fx-background-color: aquamarine;");
+        screen.setStyle("-fx-background-color: lightblue;");
         screen.setAlignment(Pos.CENTER_RIGHT);
         screen.setEditable(false);
         screen.textProperty().bind(Bindings.format("%.0f", value));
@@ -119,13 +119,13 @@ public class Calc extends Application {
     }
 
     private void makeOperandButton(Button button, final ObjectProperty<Op> triggerOp) {
-        button.setStyle("-fx-base: lightgray;");
+        button.setStyle("-fx-base: lightblue;");
         button.setOnAction(actionEvent -> curOp = triggerOp.get());
     }
 
     private Button makeStandardButton(String s) {
         Button button = new Button(s);
-        button.setStyle("-fx-base: beige;");
+        button.setStyle("-fx-base: white;");
         accelerators.put(s, button);
         button.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         return button;
