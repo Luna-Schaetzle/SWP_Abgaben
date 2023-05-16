@@ -10,6 +10,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -43,15 +44,19 @@ public class editor_3 extends Application {
         area.setPrefRowCount(20);
         area.setWrapText(true);
 
+        TextField textField = new TextField();
+        textField.setPromptText("Path");
+        textField.setPrefColumnCount(30);
         // Eingabe via Button abfragen
 
         //Ausuchen des Files
         FileChooser fileChooser = new FileChooser();
-        Button button = new Button("Open");
-        button.setOnAction(e -> {
+        Button open = new Button("Open");
+        open.setOnAction(e -> {
             File selectedFile = fileChooser.showOpenDialog(primaryStage);
 //            System.out.println(selectedFile.getAbsolutePath());
             path = selectedFile.toPath();
+            textField.setText(path.toString());
 
             // Lesen der Datei und Anzeigen des Inhalts im Textfeld
             try {
@@ -69,24 +74,39 @@ public class editor_3 extends Application {
 
         save.setOnAction(e -> {
             String text = area.getText();
-            try {
-                Files.writeString(path, text); // Schreiben des Strings in die Datei
-            } catch (IOException f) {
-                throw new RuntimeException(f);
+            if (path == null) {
+                a.setAlertType(Alert.AlertType.ERROR);
+                a.setContentText("No File selected");
+                a.show();
+            }
+            else{
+                try {
+                    Files.writeString(path, text); // Schreiben des Strings in die Datei
+                } catch (IOException f) {
+                    throw new RuntimeException(f);
+                }
+                //alert
+                a.setAlertType(Alert.AlertType.INFORMATION);
+                a.setContentText("Text Wurde gespeichert in: " + path);
+                a.show();
             }
 
-            //alert
-            a.setAlertType(Alert.AlertType.INFORMATION);
-            a.setContentText("Text Wurde gespeichert in: " + path);
-            a.show();
+
 
         });
 
 
 
 
+
+
+
+
         VBox layout = new VBox();
-        layout.getChildren().addAll(save, button, new Group(area));
+        HBox hBox = new HBox();
+        hBox.getChildren().addAll(open,save,textField);
+
+        layout.getChildren().addAll(hBox, new Group(area));
 
         Scene scene = new Scene(layout, 500, 400);
         primaryStage.setScene(scene);
