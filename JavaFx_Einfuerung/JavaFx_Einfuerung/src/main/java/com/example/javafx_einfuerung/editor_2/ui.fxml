@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.javafx_einfuerung.editor_2.Ui"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+            <MenuBar fx:id="menuBar">
+                <menus>
+                    <Menu text="File">
+                        <items>
+                            <MenuItem fx:id="menuOpen" text="Open">
+                                <onAction>#openFile</onAction>
+                            </MenuItem>
+                            <MenuItem fx:id="menuSave" text="Save">
+                                <onAction>#saveFile</onAction>
+                            </MenuItem>
+                            <MenuItem fx:id="menuSaveAs" text="Save As">
+                                <onAction>#saveFileAs</onAction>
+                            </MenuItem>
+                            <MenuItem fx:id="menuExit" text="Exit">
+                                <onAction>#exit</onAction>
+                            </MenuItem>
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+    </top>
+
+</BorderPane>

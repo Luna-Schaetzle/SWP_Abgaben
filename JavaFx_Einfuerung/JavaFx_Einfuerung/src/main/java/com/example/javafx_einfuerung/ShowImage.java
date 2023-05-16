@@ -27,7 +27,7 @@ public class ShowImage extends Application {
         ImageView imageView = new ImageView(new Image("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Stylized_uwu_emoticon.svg/220px-Stylized_uwu_emoticon.svg.png"));
         //Button
         StackPane root = new StackPane();
-         Button b = new Button("Hallo");
+        Button b = new Button("Hallo");
         b.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
