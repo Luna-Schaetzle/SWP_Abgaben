@@ -22,6 +22,7 @@ public class editor_4 extends Application {
     }
 
     private static Path path;
+    private static String defpath = "C:/Users/Admin/Desktop/text_editor_files/"; //defoult path
 
     @Override
     public void start(Stage primaryStage) {
@@ -34,13 +35,30 @@ public class editor_4 extends Application {
 
         TextField textField = new TextField();
         textField.setPromptText("Path");
-        textField.setPrefColumnCount(30);
+        textField.setPrefColumnCount(22); //30 Chars
         Alert alert = new Alert(Alert.AlertType.NONE);
+
+        //TODO: path ändern
+        Button changePath = new Button("Change Path");
+        changePath.setOnAction(e -> {
+            TextInputDialog dialog = new TextInputDialog(defpath);
+            dialog.setTitle("Change Path");
+            dialog.setHeaderText("Change the Path");
+            dialog.setContentText("Please enter the new Path: \n");
+
+            Optional<String> result = dialog.showAndWait();
+            if (result.isPresent()){
+                defpath = result.get();
+                alert.setAlertType(Alert.AlertType.INFORMATION);
+                alert.setContentText("Path wurde geändert: \n" + defpath);
+                alert.show();
+            }
+        });
 
         //New File
         Button newFile = new Button("New File");
         newFile.setOnAction(e -> {
-            String defpath = "C:/Users/Admin/Desktop/text_editor_files/"; //defoult path
+//            String defpath = "C:/Users/Admin/Desktop/text_editor_files/"; //defoult path
 //            Path defpath = Path.of("C/Users/Admin/Desktop/");
 
 
@@ -51,7 +69,7 @@ public class editor_4 extends Application {
 
 
 
-            //TODO: Default path ändern
+
 //            TextInputDialog defpathchange = new TextInputDialog(defpath);
 //            defpathchange.setContentText("Pfad: \n");
 //            defpathchange.showAndWait();
@@ -70,7 +88,7 @@ public class editor_4 extends Application {
 //                        System.out.println("Die Datei wurde erfolgreich erstellt: " + file.getAbsolutePath());
                         textField.setText(path.toString());
                         alert.setAlertType(Alert.AlertType.INFORMATION);
-                        alert.setContentText("Die Datei wurde erfolgreich erstellt: " + file.getAbsolutePath());
+                        alert.setContentText("Die Datei wurde erfolgreich erstellt: \n" + file.getAbsolutePath());
                         alert.show();
                     } else {
 //                        System.out.println("Die Datei existiert bereits.");
@@ -82,7 +100,7 @@ public class editor_4 extends Application {
 //                    System.out.println(String.valueOf(path));
 //                    System.out.println("Fehler beim Erstellen der Datei: " + f.getMessage());
                     alert.setAlertType(Alert.AlertType.ERROR);
-                    alert.setContentText("Fehler beim Erstellen der Datei: " + f.getMessage());
+                    alert.setContentText("Fehler beim Erstellen der Datei: \n" + f.getMessage());
                     alert.show();
                 }
 
@@ -132,7 +150,7 @@ public class editor_4 extends Application {
                 }
                 //alert
                 a.setAlertType(Alert.AlertType.INFORMATION);
-                a.setContentText("Text Wurde gespeichert in: " + path);
+                a.setContentText("Text Wurde gespeichert in: \n" + path);
                 a.show();
             }
 
@@ -149,7 +167,7 @@ public class editor_4 extends Application {
 
         VBox layout = new VBox();
         HBox hBox = new HBox();
-        hBox.getChildren().addAll(newFile,open,textField,save);
+        hBox.getChildren().addAll(newFile,open,textField,changePath,save);
 
         layout.getChildren().addAll(hBox, new Group(area));
 
