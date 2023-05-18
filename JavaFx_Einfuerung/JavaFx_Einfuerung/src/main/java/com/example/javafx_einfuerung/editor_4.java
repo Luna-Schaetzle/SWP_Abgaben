@@ -38,7 +38,7 @@ public class editor_4 extends Application {
         textField.setPrefColumnCount(22); //30 Chars
         Alert alert = new Alert(Alert.AlertType.NONE);
 
-        //TODO: path ändern
+
         Button changePath = new Button("Change Path");
         changePath.setOnAction(e -> {
             TextInputDialog dialog = new TextInputDialog(defpath);
@@ -58,9 +58,6 @@ public class editor_4 extends Application {
         //New File
         Button newFile = new Button("New File");
         newFile.setOnAction(e -> {
-//            String defpath = "C:/Users/Admin/Desktop/text_editor_files/"; //defoult path
-//            Path defpath = Path.of("C/Users/Admin/Desktop/");
-
 
             TextInputDialog dialog = new TextInputDialog("new file");
             dialog.setTitle("new File");
@@ -68,19 +65,12 @@ public class editor_4 extends Application {
             dialog.setContentText("Please enter the file name: \n");
 
 
-
-
-//            TextInputDialog defpathchange = new TextInputDialog(defpath);
-//            defpathchange.setContentText("Pfad: \n");
-//            defpathchange.showAndWait();
-
-
             Optional<String> result = dialog.showAndWait();
             if (result.isPresent()){
 
                 path = Path.of(defpath + result.get() + ".txt");
-               //Neues File erstellen
 
+               //Neues File erstellen
                 File file = new File(String.valueOf(path));
 
                 try {
@@ -110,7 +100,6 @@ public class editor_4 extends Application {
 
         });
 
-        // Eingabe via Button abfragen
 
         //Ausuchen des Files
         FileChooser fileChooser = new FileChooser();
@@ -159,19 +148,13 @@ public class editor_4 extends Application {
         });
 
 
-
-
-
-
-
-
         VBox layout = new VBox();
         HBox hBox = new HBox();
         hBox.getChildren().addAll(newFile,open,textField,changePath,save);
 
         layout.getChildren().addAll(hBox, new Group(area));
 
-        Scene scene = new Scene(layout, 500, 400);
+        Scene scene = new Scene(layout, 500,400); // Breite, Höhe 500, 400
         primaryStage.setScene(scene);
         primaryStage.show();
 
