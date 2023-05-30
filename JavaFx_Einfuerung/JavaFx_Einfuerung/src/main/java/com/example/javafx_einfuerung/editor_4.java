@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -32,6 +33,9 @@ public class editor_4 extends Application {
         area.setPrefRowCount(20);
         area.setWrapText(true);
 
+        //Rainbow Text
+        area.setStyle("-fx-text-fill: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);");
+
 
         TextField textField = new TextField();
         textField.setPromptText("Path");
@@ -40,6 +44,7 @@ public class editor_4 extends Application {
 
 
         Button changePath = new Button("Change Path");
+        changePath.setStyle("-fx-background-color: #ffafc7;");
         changePath.setOnAction(e -> {
             TextInputDialog dialog = new TextInputDialog(defpath);
             dialog.setTitle("Change Path");
@@ -57,6 +62,7 @@ public class editor_4 extends Application {
 
         //New File
         Button newFile = new Button("New File");
+        newFile.setStyle("-fx-background-color: #74d7ec;");
         newFile.setOnAction(e -> {
 
             TextInputDialog dialog = new TextInputDialog("new file");
@@ -104,6 +110,7 @@ public class editor_4 extends Application {
         //Ausuchen des Files
         FileChooser fileChooser = new FileChooser();
         Button open = new Button("Open");
+        open.setStyle("-fx-background-color: #ffafc7;");
         open.setOnAction(e -> {
             File selectedFile = fileChooser.showOpenDialog(primaryStage);
 //            System.out.println(selectedFile.getAbsolutePath());
@@ -123,6 +130,7 @@ public class editor_4 extends Application {
         Alert a = new Alert(Alert.AlertType.NONE);
 
         Button save = new Button("Save");
+        save.setStyle("-fx-background-color: #74d7ec;");
 
         save.setOnAction(e -> {
             String text = area.getText();
@@ -148,6 +156,8 @@ public class editor_4 extends Application {
         });
 
 
+
+
         VBox layout = new VBox();
         HBox hBox = new HBox();
         hBox.getChildren().addAll(newFile,open,textField,changePath,save);
@@ -155,6 +165,7 @@ public class editor_4 extends Application {
         layout.getChildren().addAll(hBox, new Group(area));
 
         Scene scene = new Scene(layout, 500,400); // Breite, Höhe 500, 400
+//        scene.setFill(Color.PINK);
         primaryStage.setScene(scene);
         primaryStage.show();
 
