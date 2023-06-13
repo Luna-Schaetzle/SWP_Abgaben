@@ -25,6 +25,8 @@ public class editor_4 extends Application {
     private static Path path;
     private static String defpath = "C:/Users/Admin/Desktop/text_editor_files/"; //defoult path
 
+    private static double progress = 0;
+
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("luna scripturae");
@@ -138,6 +140,7 @@ public class editor_4 extends Application {
                 a.setAlertType(Alert.AlertType.ERROR);
                 a.setContentText("No File selected");
                 a.show();
+                progress = progress + 0.1;
             }
             else{
                 try {
@@ -149,11 +152,13 @@ public class editor_4 extends Application {
                 a.setAlertType(Alert.AlertType.INFORMATION);
                 a.setContentText("Text Wurde gespeichert in: \n" + path);
                 a.show();
+
             }
 
 
 
         });
+
 
 
 

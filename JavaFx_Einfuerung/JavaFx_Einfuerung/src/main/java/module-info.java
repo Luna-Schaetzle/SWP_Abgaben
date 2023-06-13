@@ -5,6 +5,7 @@ module com.example.javafx_einfuerung {
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
     requires java.logging;
+    requires java.desktop;
 
     opens com.example.javafx_einfuerung to javafx.fxml;
     exports com.example.javafx_einfuerung;
